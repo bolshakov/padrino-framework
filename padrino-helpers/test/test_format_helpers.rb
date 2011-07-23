@@ -208,6 +208,9 @@ class TestFormatHelpers < Test::Unit::TestCase
     should "display a few years ago" do
       assert_equal 'over 7 years', time_ago_in_words(2800.days.ago - 5.minutes.ago.sec)
     end
+    should "display almost few years" do
+      assert_equal 'almost 2 years', time_ago_in_words(725.days.ago)
+    end
   end
 
   context 'for #js_escape_html method' do
